@@ -3,15 +3,17 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
-class DefaultController extends Controller
+class TestController extends Controller
 {
     /**
-     * @Route("/ping")
+     * @Route("/test")
      */
     public function indexAction()
     {
-        var_dump('Jest!!!');exit;
-      //  return $this->render('index.html.twig');
+        return JsonResponse::create([
+            'status' => 'success'
+        ]);
     }
 }

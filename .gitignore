@@ -4,3 +4,4 @@
 !/app/logs/.gitkeep
 /app/logs/*
 /vendor/
+/vagrant/.vagrant
