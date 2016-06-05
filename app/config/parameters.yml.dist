@@ -1,0 +1,4 @@
+parameters:
+    locale: pl
+    secret_key: SecretToken
+

@@ -1,0 +1,12 @@
+imports:
+    - { resource: parameters.yml }
+
+framework:
+    secret: '%secret_key%'
+    translator: { fallback: '%locale%' }
+    default_locale:  "%locale%"
+    form: { enabled: true }
+    validation: { enabled: true, enable_annotations: true }
+    csrf_protection: false
+    annotations: ~
+

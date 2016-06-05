@@ -1,0 +1,46 @@
+{
+  "name": "tarnawski/symfony-microkernel",
+  "authors": [
+    {
+      "name": "Tomasz Tarnawski",
+      "email": "tarnawski27@gmail.com"
+    }
+  ],
+  "require": {
+    "incenteev/composer-parameter-handler": "~2.1",
+    "symfony/symfony": "~3.0",
+    "symfony/framework-bundle": "^3.0",
+    "sensio/framework-extra-bundle": "^3.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ],
+    "post-update-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ]
+  },
+  "autoload": {
+    "classmap": [
+      "app/AppKernel.php"
+    ],
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "extra": {
+    "incenteev-parameters": [
+      {
+        "file": "app/config/parameters.yml",
+        "dist-file": "app/config/parameters.yml.dist",
+        "env-map": {
+          "secret_key": "SECRET_KEY",
+          "locale": "LOCALE"
+        }
+      }
+    ]
+  }
+}
