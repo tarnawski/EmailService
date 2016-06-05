@@ -27,9 +27,10 @@ composer install
 
 ####1. The quickest way to set up
 
-Just run PHP server:
+Just create database and run PHP server:
 
 ```
+php bin/console doctrine:schema:create --force
 php -S localhost:8001
 ```
 
@@ -73,7 +74,8 @@ Endpoint documentation:
 
 | Method | Path         |  Description                     |
 |--------|--------------|----------------------------------|
-| GET    | /emails      |  Return list of email addres     |             
+| GET    | /            |  Only for test API               |
+| GET    | /emails      |  Return list of email address    |
 | GET    | /emails/{id} |  Return single email address     |             
 | POST   | /emails      |  Create new email address        |             
 | DELETE | /emails/{id} |  Delete email address            |             
