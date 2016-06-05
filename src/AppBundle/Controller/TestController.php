@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class TestController extends Controller
 {
     /**
-     * @Route("/test")
+     * @Route("/")
      */
     public function indexAction()
     {

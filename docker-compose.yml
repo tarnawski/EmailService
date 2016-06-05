@@ -1,0 +1,7 @@
+web:
+  build: .
+  command: php -S 0.0.0.0:8000 -t /app
+  ports:
+    - "8001:8000"
+  volumes:
+    - .:/app
