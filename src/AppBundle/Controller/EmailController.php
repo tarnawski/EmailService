@@ -26,7 +26,8 @@ class EmailController extends Controller
         $serializer = $this->get('serializer');
         $jsonEmails = $serializer->serialize(
             $emails,
-            'json', array('groups' => array('default'))
+            'json',
+            array('groups' => array('default'))
         );
 
         return Response::create($jsonEmails);
@@ -47,7 +48,8 @@ class EmailController extends Controller
         $serializer = $this->get('serializer');
         $jsonEmails = $serializer->serialize(
             $email,
-            'json', array('groups' => array('default'))
+            'json',
+            array('groups' => array('default'))
         );
 
         return Response::create($jsonEmails);
@@ -86,7 +88,8 @@ class EmailController extends Controller
         $serializer = $this->get('serializer');
         $jsonEmails = $serializer->serialize(
             $email,
-            'json', array('groups' => array('default'))
+            'json',
+            array('groups' => array('default'))
         );
 
         return Response::create($jsonEmails);

@@ -1,11 +1,9 @@
 <?php
 
 use Symfony\Component\HttpFoundation\Request;
-use Doctrine\Common\Annotations\AnnotationRegistry;
 
 $loader = require __DIR__ . '/../vendor/autoload.php';
-AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
-
+$loader = require __DIR__.'/../app/autoload.php';
 $kernel = new AppKernel('prod', false);
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request)->send();
