@@ -15,7 +15,7 @@ class Email
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
-     * @Groups({"default"})     
+     * @Groups({"default"})
      */
     private $id;
 

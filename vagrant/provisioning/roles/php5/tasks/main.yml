@@ -1,12 +1,6 @@
 ---
 - name: Install python-pycurl
   apt: pkg=python-pycurl state=latest
-#
-#- name: Add php repository
-#  apt_repository: repo='deb http://ppa.launchpad.net/ondrej/php5-oldstable/ubuntu precise main' state=present
-#
-#- name: Add php repository key
-#  apt_key: url=http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x4F4EA0AAE5267A6C state=present
 
 - name: Install PHP 
   apt: name=php5 state=latest force=yes
