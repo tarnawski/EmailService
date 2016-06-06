@@ -66,8 +66,26 @@ Just run this command in project catalog:
 docker-compose run
 ```
 
-
 ###That's all! Now you can start to use app!!!
+
+Tests
+-----
+
+The project includes Behat test. Command to run all scenarios:
+```
+bin/behat
+```
+
+In the project I use static analysis  tools:
+- PHP_CodeSniffer
+- PHP Depend
+- Copy/Paste Detector
+- PHP Mess Detector
+
+To to execute all tests run build task with Ant tools:
+```
+ant builds
+```
 
 Endpoint documentation:
 -----------------------

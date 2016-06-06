@@ -27,3 +27,20 @@ Feature: Create new email address
     }
     """
     And email count is equal to "4"
+
+  @cleanDB
+  Scenario: Create new email address with invalid data
+    When I send a POST request to "/emails" with body:
+    """
+    {
+      "email":"invalid_email"
+    }
+    """
+    Then the response code should be 200
+    And the JSON response should match:
+    """
+    {
+      "status": "Invalid email"
+    }
+    """
+    And email count is equal to "3"
