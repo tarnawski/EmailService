@@ -5,7 +5,7 @@ parameters:
     database_driver:    pdo_sqlite
     database_host:      ~
     database_port:      ~
-    database_name:      path/to/db.sqlite
-    database_path:      path/to/db.sqlite
+    database_name:      sqlite
+    database_path:      sqlite
     database_user:      ~
     database_password:  ~
