@@ -84,7 +84,7 @@ In the project I use static analysis  tools:
 
 To to execute all tests run build task with Ant tools:
 ```
-ant builds
+ant build
 ```
 
 Endpoint documentation:
