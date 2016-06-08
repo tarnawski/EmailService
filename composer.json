@@ -13,7 +13,8 @@
     "sensio/framework-extra-bundle": "^3.0",
     "incenteev/composer-parameter-handler": "~2.1",
     "doctrine/doctrine-bundle": "^1.6",
-    "doctrine/orm": "^2.5"
+    "doctrine/orm": "^2.5",
+    "nmred/kafka-php": "0.1.*"
   },
   "require-dev": {
     "behat/behat": "~3.0",
@@ -29,8 +30,7 @@
     "pdepend/pdepend" : "2.2.4",
     "sebastian/phpcpd": "^2.0",
     "codifico/parameter-bag-extension": "dev-master",
-    "codifico/web-api-extension": "1.0.x@dev",
-    "nmred/kafka-php": "0.1.*"
+    "codifico/web-api-extension": "1.0.x@dev"
   },
   "scripts": {
     "post-install-cmd": [
