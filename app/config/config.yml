@@ -1,6 +1,21 @@
 imports:
     - { resource: parameters.yml }
 
+services:
+    app.email_listener:
+        class: AppBundle\EventListener\EmailListener
+        arguments: ['@app.kafka_service']
+        tags:
+            - { name: doctrine.event_listener, event: postPersist }
+
+    app.kafka_service:
+        class:     AppBundle\Services\KafkaService
+        arguments:
+            - %kafka_enable%
+            - %kafka_host%
+            - %kafka_port%
+            - %kafka_topic%
+
 framework:
     secret: '%secret_key%'
     form: ~

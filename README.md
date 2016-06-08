@@ -96,4 +96,23 @@ Endpoint documentation:
 | GET    | /emails      |  Return list of email address    |
 | GET    | /emails/{id} |  Return single email address     |             
 | POST   | /emails      |  Create new email address        |             
-| DELETE | /emails/{id} |  Delete email address            |             
+| DELETE | /emails/{id} |  Delete email address            |        
+     
+Apache Kafka implement
+======================
+
+This microservice is adapted to work with Apache Kafka. When new email appear in system application automaticly report status "CHANGED" to Kafka.
+To enable connetion you must set a few parameters:
+```
+kafka_enable 
+kafka_host
+kafka_port
+kafka_topic
+```
+
+By default connection is disabled.
+
+Repository with Apache Kafka and Zookeeper:
+```
+https://github.com/tarnawski/kafka.git
+```
