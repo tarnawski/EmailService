@@ -9,3 +9,8 @@ parameters:
     database_path:      sqlite
     database_user:      ~
     database_password:  ~
+
+    kafka_enable: false
+    kafka_host: 10.0.0.201
+    kafka_port: 9092
+    kafka_topic: test

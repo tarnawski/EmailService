@@ -4,7 +4,7 @@
     <property name="sourcedir" value="${basedir}/src" />
     <property name="builddir" value="${workspace}/app/build" />
 
-    <target name="build" depends="prepare,composer,vendors,parameters,phpcs,pdepend,phpcpd,phpmd"/>
+    <target name="build" depends="prepare,composer,vendors,parameters,phpspec,phpcs,pdepend,phpcpd,phpmd"/>
 
     <target name="prepare" depends="clean" description="Prepare for build">
         <mkdir dir="${builddir}/logs"/>
@@ -34,6 +34,13 @@
         <exec executable="cp" failonerror="true">
             <arg path="app/config/parameters.yml.dist" />
             <arg path="app/config/parameters.yml" />
+        </exec>
+    </target>
+
+    <target name="phpspec" description="Run PHPSpec test">
+        <exec executable="${basedir}/bin/phpspec" failonerror="true">
+            <arg value="run" />
+            <arg path="${sourcedir}" />
         </exec>
     </target>
 

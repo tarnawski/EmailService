@@ -12,6 +12,7 @@ class TestController extends Controller
      */
     public function indexAction()
     {
+
         return JsonResponse::create([
             'status' => 'success'
         ]);
