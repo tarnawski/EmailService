@@ -76,6 +76,11 @@ The project includes Behat test. Command to run all scenarios:
 bin/behat
 ```
 
+To run PHPSpec:
+```
+bin/phpspec run
+```
+
 In the project I use static analysis  tools:
 - PHP_CodeSniffer
 - PHP Depend
